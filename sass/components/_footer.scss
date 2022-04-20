@@ -1,0 +1,22 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $bgc-dark;
+}
+
+.footer__wrapper {
+    display: flex;
+}
+
+.footer__text {
+    display: block;
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-text-mode-dark;
+}

@@ -1,0 +1,29 @@
+/* Кольори тексту світла тема */
+$primary-text-mode-light: #212121;
+$secondary-text-mode-light: #757575;
+$logo-dark-text: #000000;
+
+$accent-color: #2196f3;
+$accent-color-hover: #188ce8;
+/* Кольори тексту темна тема */
+$primary-text-mode-dark: #ffffff;
+$secondary-text-mode-dark: rgba(255, 255, 255, 0.6);
+/* Кольори фону */
+$main-bgc-mode-light: #ffffff;
+$secondary-bgc-mode-light: #f5f4fa;
+$bgc-dark: #2f303a;
+
+/* Кольори іконок */
+$icon-primary: rgba(175, 177, 184, 1);
+$icon-white: rgba(255, 255, 255, 1);
+
+/* Рамка  */
+$header-border-color: #ececec;
+$portfolio-item-border-cl: #eeeeee;
+
+/* Перехід анімований */
+$anim-duration-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// Шрифти
+$main-font: "Roboto", sans-serif;
+$secondary-font: "Raleway", sans-serif;

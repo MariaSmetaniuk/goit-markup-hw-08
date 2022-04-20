@@ -1,0 +1,39 @@
+.employee {
+    background-color: $secondary-bgc-mode-light;
+}
+
+.employee__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.employee__item {
+    text-align: center;
+
+    background-color: $main-bgc-mode-light;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.employee__description {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.employee__name,
+.employee__position {
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+
+.employee__name {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.employee__position {
+    margin-bottom: 16px;
+    color: $secondary-text-mode-light;
+}

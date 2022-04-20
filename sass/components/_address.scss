@@ -1,0 +1,26 @@
+.address {
+    display: inline-block;
+    width: 231px;
+    font-family: inherit;
+    font-style: inherit;
+}
+
+.address__item {
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.address__location {
+    color: $primary-text-mode-dark;
+}
+
+.address__mail,
+.address__tel {
+    color: $secondary-text-mode-dark;
+}
