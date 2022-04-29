@@ -1,10 +1,31 @@
 .features__list {
-    display: flex;
-    justify-content: space-between;
+    @include mq (tablet) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 .features__item {
-    width: 270px;
+    @include mq (tablet) {
+        width: calc((100% - 30px) / 2);
+    }
+
+    @include mq (desktop) {
+        width: calc((100% - 90px) / 4);
+    }
+
+    @include mq (mobile-only) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include mq (tablet-only) {
+        &:not(:nth-last-child(-n + 2)) {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .features__icon-wrapper {

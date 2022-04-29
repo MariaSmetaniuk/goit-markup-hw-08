@@ -1,19 +1,56 @@
 .hero {
-    max-width: 1600px;
-    height: 600px;
+    display: flex;
+    align-items: center;
     margin: 0 auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
-
+    max-width: 1600px;
+    height: 400px;
+    
     text-align: center;
-
+    
+    @include mq (desktop) {
+        height: 600px;
+    }
+    
     background-color: $bgc-dark;
-    background-image: linear-gradient(to bottom,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url(../images/bg-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
+    // Ретінізація фонових зображень
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-image_sm.jpg);
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    -webkit-image-set(url(../images/bg-image_sm.webp) 1x);
+    
+    @include mq (retina) {
+        background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/bg-image_sm@2x.jpg);
+        background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), -webkit-image-set(url(../images/bg-image_sm@2x.webp) 2x);
+    }
+
+    @include mq (tablet) {
+        background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/bg-image_md.jpg);
+        background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        -webkit-image-set(url(../images/bg-image_md.webp) 1x);
+        
+        @include mq (retina) {
+            background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/bg-image_md@2x.jpg);
+            background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), -webkit-image-set(url(../images/bg-image_md@2x.webp) 2x);
+        }
+    }
+
+    @include mq (desktop) {
+        background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/bg-image_lg.jpg);
+        background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            -webkit-image-set(url(../images/bg-image_lg.webp) 1x);
+    
+        @include mq (retina) {
+            background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/bg-image_lg@2x.jpg);
+            background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), -webkit-image-set(url(../images/bg-image_lg@2x.webp) 2x);
+        }
+    }
 }

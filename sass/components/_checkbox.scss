@@ -4,11 +4,16 @@
     align-items: center;
     margin-bottom: 30px;
 
-    font-size: 14px;
-    line-height: 1.71px;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
 
     color: $secondary-text-mode-light;
+
+    @include mq (desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .checkbox__input {
@@ -21,6 +26,7 @@
     width: 16px;
     height: 15px;
     margin-right: 8px;
+    flex-shrink: 0;
 
     border-radius: 2px;
     border: 2px solid $primary-text-mode-light;
@@ -29,6 +35,7 @@
         border-color: transparent;
         background-image: url(../images/icons-svg/icon-check.svg);
         background-size: contain;
+        background-repeat: no-repeat;
         background-origin: border-box;
     }
 }

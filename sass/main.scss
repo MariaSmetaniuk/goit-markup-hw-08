@@ -1,6 +1,9 @@
 // Змінні
 @import './utils/variables';
 
+// Mixins
+@import './utils/mixins';
+
 // visually-hidden
 @import './utils/visually-hidden';
 
@@ -28,6 +31,9 @@
 // Header
 @import './components/header';
 
+// Mobile menu
+@import './components/menu-button';
+@import './components/mobile-menu';
 
 // Navigation
 @import './components/navigation';

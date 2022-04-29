@@ -10,15 +10,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.min.css">i
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container header__container">
             <a class="link logo header__logo" href="">Web<span class="logo--dark">Studio</span></a>
-            <nav>
-                <ul class="list nav">
+            <button class="menu-button button" type="button" aria-label="Кнопка открытия меню" aria-expanded="false"
+                data-menu-button>
+                <svg class="menu-button__icon">
+                    <use class="menu-button__icon-open" href="./images/icons.svg#menu-open"></use>
+                    <use class="menu-button__icon-close" href="./images/icons.svg#menu-close"></use>
+                </svg>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list list">
                     <li class="nav__item"><a class="link nav__link" href="./index.html">Студия</a></li>
                     <li class="nav__item"><a class="nav__link link  nav__link--current" href="./portfolio.html">Портфолио</a></li>
                     <li class="nav__item"><a class="nav__link link" href="">Контакты</a></li>
@@ -27,25 +34,25 @@
             <ul class="contacts list">
                 <li class="contacts__item">
                     <a class="link contacts__link" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon" width="16px" height="12px">
+                        <svg class="contacts__icon contacts__envelope">
                             <use href="./images/icons.svg#envelope"></use>
                         </svg>info@devstudio.com</a>
                 </li>
                 <li class="contacts__item">
                     <a class="link contacts__link" href="tel:+380961111111">
-                        <svg class="contacts__icon" width="10px" height="16px">
+                        <svg class="contacts__icon contacts__smartphone">
                             <use href="./images/icons.svg#smartphone"></use>
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
         </div>
-    </header>
+    </header> 
     <main>
         <!-- Портфолио -->
         <section class="portfolio section">
             <div class="container">
                 <h1 class="title visually-hidden">Портфолио</h1>
-                <!-- Фільтр -->
+  
                 <ul class="filter__list list">
                     <li class="filter__item"><button class="filter__button button" type="button">Все</button></li>
                     <li class="filter__item"><button class="filter__button button" type="button">Веб-сайты</button></li>
@@ -53,12 +60,27 @@
                     <li class="filter__item"><button class="filter__button button" type="button">Дизайн</button></li>
                     <li class="filter__item"><button class="filter__button button" type="button">Маркетинг</button></li>
                 </ul>
-                <!-- Проекти -->
-                <ul class="projects__list list">
+
+                 <ul class="projects__list list"> 
                     <li class="projects__item">
                         <a class="projects__link link" href="">
                             <div class="projects__wrapper">
-                                <img class="projects__img" src="./images/website.jpg" alt="Веб-сайт" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/project-cards/card1_lg.webp 1x, ./images/project-cards/card1_lg@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card1_lg.jpg 1x, ./images/project-cards/card1_lg@2x.jpg 2x"
+                                        media="(min-width: 1200px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card1_md.webp 1x, ./images/project-cards/card1_md@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card1_md.jpg 1x, ./images/project-cards/card1_md@2x.jpg 2x"
+                                        media="(min-width: 768px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card1_sm.webp 1x, ./images/project-cards/card1_sm@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card1_sm.jpg 1x, ./images/project-cards/card1_sm@2x.jpg 2x"
+                                        media="(max-width: 767px)" type="image/jpg" />
+                                    <img class="projects__img" src="./images/project-cards/card1_sm.jpg" alt="Веб-сайт" width="450"
+                                        height="294">
+                                </picture>
                                 <p class="projects__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о&nbsp;компании или частном лице.</p>
                             </div>
                             <div class="projects__content">
@@ -70,7 +92,21 @@
                     <li class="projects__item">
                         <a class="projects__link link" href="">
                             <div class="projects__wrapper">
-                                <img class="projects__img" src="./images/basketball-players.jpg" alt="Баскетбольние игроки" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/project-cards/card2_lg.webp 1x, ./images/project-cards/card2_lg@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card2_lg.jpg 1x, ./images/project-cards/card2_lg@2x.jpg 2x"
+                                        media="(min-width: 1200px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card2_md.webp 1x, ./images/project-cards/card2_md@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card2_md.jpg 1x, ./images/project-cards/card2_md@2x.jpg 2x"
+                                        media="(min-width: 768px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card2_sm.webp 1x, ./images/project-cards/card2_sm@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card2_sm.jpg 1x, ./images/project-cards/card2_sm@2x.jpg 2x"
+                                        media="(max-width: 767px)" type="image/jpg" />
+                                    <img class="projects__img" src="./images/project-cards/card2_sm.jpg" alt="Баскетбольние игроки" width="450" height="294">
+                                </picture>
                                 <p class="projects__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о&nbsp;компании или частном лице.</p>
                             </div>
@@ -83,7 +119,22 @@
                     <li class="projects__item">
                         <a class="projects__link link" href="">
                             <div class="projects__wrapper">
-                                <img class="projects__img" src="./images/restaurant-logo.jpg" alt="Логотип ресторана" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/project-cards/card3_lg.webp 1x, ./images/project-cards/card3_lg@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card3_lg.jpg 1x, ./images/project-cards/card3_lg@2x.jpg 2x"
+                                        media="(min-width: 1200px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card3_md.webp 1x, ./images/project-cards/card3_md@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card3_md.jpg 1x, ./images/project-cards/card3_md@2x.jpg 2x"
+                                        media="(min-width: 768px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card3_sm.webp 1x, ./images/project-cards/card3_sm@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card3_sm.jpg 1x, ./images/project-cards/card3_sm@2x.jpg 2x"
+                                        media="(max-width: 767px)" type="image/jpg" />
+                                    <img class="projects__img" src="./images/project-cards/card3_sm.jpg" alt="Логотип ресторана" width="450"
+                                        height="294">
+                                </picture>
                                 <p class="projects__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о&nbsp;компании или частном лице.</p>
                             </div>
                             <div class="projects__content">
@@ -95,7 +146,22 @@
                     <li class="projects__item">
                         <a class="projects__link link" href="">
                             <div class="projects__wrapper">
-                                <img class="projects__img" src="./images/headphone.jpg" alt="Наушники" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/project-cards/card4_lg.webp 1x, ./images/project-cards/card4_lg@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card4_lg.jpg 1x, ./images/project-cards/card4_lg@2x.jpg 2x"
+                                        media="(min-width: 1200px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card4_md.webp 1x, ./images/project-cards/card4_md@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card4_md.jpg 1x, ./images/project-cards/card4_md@2x.jpg 2x"
+                                        media="(min-width: 768px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card4_sm.webp 1x, ./images/project-cards/card4_sm@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card4_sm.jpg 1x, ./images/project-cards/card4_sm@2x.jpg 2x"
+                                        media="(max-width: 767px)" type="image/jpg" />
+                                    <img class="projects__img" src="./images/project-cards/card4_sm.jpg" alt="Наушники" width="450"
+                                        height="294">
+                                </picture>
                                 <p class="projects__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о&nbsp;компании или частном лице.</p>
                             </div>
                             <div class="projects__content">
@@ -107,7 +173,22 @@
                     <li class="projects__item">
                         <a class="projects__link link" href="">
                             <div class="projects__wrapper">
-                                <img class="projects__img" src="./images/boxes.jpg" alt="Коробки" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/project-cards/card5_lg.webp 1x, ./images/project-cards/card5_lg@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card5_lg.jpg 1x, ./images/project-cards/card5_lg@2x.jpg 2x"
+                                        media="(min-width: 1200px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card5_md.webp 1x, ./images/project-cards/card5_md@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card5_md.jpg 1x, ./images/project-cards/card5_md@2x.jpg 2x"
+                                        media="(min-width: 768px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card5_sm.webp 1x, ./images/project-cards/card5_sm@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card5_sm.jpg 1x, ./images/project-cards/card5_sm@2x.jpg 2x"
+                                        media="(max-width: 767px)" type="image/jpg" />
+                                    <img class="projects__img" src="./images/project-cards/card5_sm.jpg" alt="Коробки" width="450"
+                                        height="294">
+                                </picture>
                                 <p class="projects__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о&nbsp;компании или частном лице.</p>
                             </div>
                             <div class="projects__content">
@@ -119,7 +200,22 @@
                     <li class="projects__item">
                         <a class="projects__link link" href="">
                             <div class="projects__wrapper">
-                                <img class="projects__img" src="./images/computer.jpg" alt="Компьютер" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/project-cards/card6_lg.webp 1x, ./images/project-cards/card6_lg@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card6_lg.jpg 1x, ./images/project-cards/card6_lg@2x.jpg 2x"
+                                        media="(min-width: 1200px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card6_md.webp 1x, ./images/project-cards/card6_md@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card6_md.jpg 1x, ./images/project-cards/card6_md@2x.jpg 2x"
+                                        media="(min-width: 768px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card6_sm.webp 1x, ./images/project-cards/card6_sm@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card6_sm.jpg 1x, ./images/project-cards/card6_sm@2x.jpg 2x"
+                                        media="(max-width: 767px)" type="image/jpg" />
+                                    <img class="projects__img" src="./images/project-cards/card6_sm.jpg" alt="Компьютер" width="450"
+                                        height="294">
+                                </picture>
                                 <p class="projects__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о&nbsp;компании или частном лице.</p>
                             </div>
                             <div class="projects__content">
@@ -131,7 +227,22 @@
                     <li class="projects__item">
                         <a class="projects__link link" href="">
                             <div class="projects__wrapper">
-                                <img class="projects__img" src="./images/magazine.jpg" alt="Журнал" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/project-cards/card7_lg.webp 1x, ./images/project-cards/card7_lg@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card7_lg.jpg 1x, ./images/project-cards/card7_lg@2x.jpg 2x"
+                                        media="(min-width: 1200px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card7_md.webp 1x, ./images/project-cards/card7_md@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card7_md.jpg 1x, ./images/project-cards/card7_md@2x.jpg 2x"
+                                        media="(min-width: 768px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card7_sm.webp 1x, ./images/project-cards/card7_sm@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card7_sm.jpg 1x, ./images/project-cards/card7_sm@2x.jpg 2x"
+                                        media="(max-width: 767px)" type="image/jpg" />
+                                    <img class="projects__img" src="./images/project-cards/card7_sm.jpg" alt="Журнал" width="450"
+                                        height="294">
+                                </picture>
                                 <p class="projects__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о&nbsp;компании или частном лице.</p>
                             </div>
                             <div class="projects__content">
@@ -143,7 +254,22 @@
                     <li class="projects__item">
                         <a class="projects__link link" href="">
                             <div class="projects__wrapper">
-                                <img class="projects__img" src="./images/logo-card.jpg" alt="Карточка бренда" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/project-cards/card8_lg.webp 1x, ./images/project-cards/card8_lg@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card8_lg.jpg 1x, ./images/project-cards/card8_lg@2x.jpg 2x"
+                                        media="(min-width: 1200px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card8_md.webp 1x, ./images/project-cards/card8_md@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card8_md.jpg 1x, ./images/project-cards/card8_md@2x.jpg 2x"
+                                        media="(min-width: 768px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card8_sm.webp 1x, ./images/project-cards/card8_sm@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card8_sm.jpg 1x, ./images/project-cards/card8_sm@2x.jpg 2x"
+                                        media="(max-width: 767px)" type="image/jpg" />
+                                    <img class="projects__img" src="./images/project-cards/card8_sm.jpg" alt="Карточка бренда" width="450"
+                                        height="294">
+                                </picture>
                                 <p class="projects__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о&nbsp;компании или частном лице.</p>
                             </div>
                             <div class="projects__content">
@@ -155,13 +281,30 @@
                     <li class="projects__item">
                         <a class="projects__link link" href="">
                             <div class="projects__wrapper">
-                                <img class="projects__img" src="./images/laptop.jpg" alt="Человек печатает на ноутбуке" width="370" height="294">
-                                <p class="projects__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о&nbsp;компании или частном лице.</p>
+                                <picture>
+                                    <source srcset="./images/project-cards/card9_lg.webp 1x, ./images/project-cards/card9_lg@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card9_lg.jpg 1x, ./images/project-cards/card9_lg@2x.jpg 2x"
+                                        media="(min-width: 1200px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card9_md.webp 1x, ./images/project-cards/card9_md@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card9_md.jpg 1x, ./images/project-cards/card9_md@2x.jpg 2x"
+                                        media="(min-width: 768px)" type="image/jpg" />
+                                    <source srcset="./images/project-cards/card9_sm.webp 1x, ./images/project-cards/card9_sm@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source srcset="./images/project-cards/card9_sm.jpg 1x, ./images/project-cards/card9_sm@2x.jpg 2x"
+                                        media="(max-width: 767px)" type="image/jpg" />
+                                    <img class="projects__img" src="./images/project-cards/card9_sm.jpg" alt="Человек печатает на ноутбуке"
+                                        width="450" height="294">
+                                </picture>
+                                <p class="projects__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о&nbsp;компании или частном лице.
+                                </p>
                             </div>
-                                <div class="projects__content">
-                                    <h2 class="projects__title">Growing Business</h2>
-                                    <p class="projects__category">Приложение</p>
-                                </div>
+                            <div class="projects__content">
+                                <h2 class="projects__title">Growing Business</h2>
+                                <p class="projects__category">Приложение</p>
+                            </div>
                         </a>
                     </li>
                 </ul>
@@ -171,52 +314,54 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer__wrapper">
-            <div class="footer__address">
-                <a class="link logo footer__logo" href="">Web<span class="logo--white">Studio</span></a>
-                <address class="address">
-                    <ul class="address__list list">
-                        <li class="address__item"><a class="address__location link" href="">г. Киев, пр-т Леси Украинки,
-                                26</a></li>
-                        <li class="address__item"><a class="address__mail link"
-                                href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <div class="footer__contacts-wrapper">
+                <div class="footer__address">
+                    <a class="link logo footer__logo" href="">Web<span class="logo--white">Studio</span></a>
+                    <address class="address">
+                        <ul class="address__list list">
+                            <li class="address__item"><a class="address__location link" href="">г. Киев, пр-т Леси Украинки,
+                                    26</a></li>
+                            <li class="address__item"><a class="address__mail link"
+                                    href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                            <li class="address__item"><a class="address__tel link" href="tel:+380961111111">+38 096 111 11
+                                    11</a></li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="footer__socials">
+                    <p class="footer__text">присоединяйтесь</p>
+                    <ul class="socials list">
+                        <li class="socials__item">
+                            <a href="" class="socials__link socials__link--dark link">
+                                <svg class="socials__icon">
+                                    <use href="./images/icons.svg#instagram"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li class="address__item"><a class="address__tel link" href="tel:+380961111111">+38 096 111 11
-                                11</a></li>
+                        <li class="socials__item">
+                            <a href="" class="socials__link socials__link--dark link">
+                                <svg class="socials__icon">
+                                    <use href="./images/icons.svg#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a href="" class="socials__link socials__link--dark link">
+                                <svg class="socials__icon">
+                                    <use href="./images/icons.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a href="" class="socials__link socials__link--dark link">
+                                <svg class="socials__icon">
+                                    <use href="./images/icons.svg#linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
-                </address>
-            </div>
-            <div class="footer__socials">
-                <p class="footer__text">присоединяйтесь</p>
-                <ul class="socials list">
-                    <li class="socials__item">
-                        <a href="" class="socials__link socials__link--dark link">
-                            <svg class="socials__icon">
-                                <use href="./images/icons.svg#instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a href="" class="socials__link socials__link--dark link">
-                            <svg class="socials__icon">
-                                <use href="./images/icons.svg#twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a href="" class="socials__link socials__link--dark link">
-                            <svg class="socials__icon">
-                                <use href="./images/icons.svg#facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a href="" class="socials__link socials__link--dark link">
-                            <svg class="socials__icon">
-                                <use href="./images/icons.svg#linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
             <div class="footer__form-wrapper">
                 <b class="footer__text">Подпишитесь на рассылку</b>
@@ -232,5 +377,44 @@
             </div>
         </div>
     </footer>
+    <!-- Mobile menu -->
+    <div class="mobile-overlay" data-menu>
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list list">
+                    <li class="mobile-nav__item">
+                        <a href="./index.html" class="mobile-nav__link link">Студия</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="./portfolio.html" class="mobile-nav__link mobile-nav__link--current link">Портфолио</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="" class="mobile-nav__link link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <div class="mobile-menu__contacts">
+                    <a href="" class="mobile-menu__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    <a href="" class="mobile-menu__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </div>
+                <ul class="mobile-socials list">
+                    <li class="mobile-socials__item">
+                        <a href="" class="mobile-socials__link link">Instagram</a>
+                    </li>
+                    <li class="mobile-socials__item">
+                        <a href="" class="mobile-socials__link link">Twitter</a>
+                    </li>
+                    <li class="mobile-socials__item">
+                        <a href="" class="mobile-socials__link link">Facebook</a>
+                    </li>
+                    <li class="mobile-socials__item">
+                        <a href="" class="mobile-socials__link link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

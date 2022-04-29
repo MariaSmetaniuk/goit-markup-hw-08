@@ -6,7 +6,7 @@
 }
 
 .address__item {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 
     font-size: 14px;
     line-height: 1.71;
@@ -15,7 +15,12 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include mq (desktop) {
+        margin-bottom: 9px;
+    }
 }
+
 .address__location {
     color: $primary-text-mode-dark;
 }

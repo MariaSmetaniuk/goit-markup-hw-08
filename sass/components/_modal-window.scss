@@ -16,6 +16,11 @@
     transition: opacity $anim-duration-timing-function,
         visibility $anim-duration-timing-function;
 
+    z-index: 30;
+
+    @include mq (notDesktop) {
+        overflow: auto;
+    }
 }
 
 .is-hidden {
@@ -25,18 +30,35 @@
 }
 
 .is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: scale(0.8);
+    @include mq (desktop) {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-
-    width: 528px;
-    min-height: 581px;
+    @include mq (notDesktop) {
+        position: relative;
+        margin: 50px auto;
+        transform: scale(1);
+        transition: transform $anim-duration-timing-function;
+    }
+    width: calc(100% - 30px);
+    min-height: 609px;
     padding: 40px;
+
+    @include mq (mobile) {
+        width: 450px;
+    }
+    @include mq (desktop) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    
+        width: 528px;
+        min-height: 581px;
+    }
 
     background-color: $main-bgc-mode-light;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -44,7 +66,7 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    transition: transform $anim-duration-timing-function;
+    z-index: 40;
 }
 
 .modal__title {
@@ -53,10 +75,14 @@
 
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     letter-spacing: 0.03em;
+    text-align: center;
 
     color: $primary-text-mode-light;
+    @include mq (desktop) {
+        line-height: 1.15;
+    }
 }
 
 .close {

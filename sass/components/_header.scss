@@ -1,10 +1,23 @@
 .header {
     border-bottom: 1px solid $header-border-color;
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
+    padding-top: 10px;
+    padding-bottom: 10px;
 
+    @include mq (tablet) {
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+    @include mq (desktop) {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
 .header__container {
     display: flex;
     align-items: center;
+
+    @include mq (mobile-only) {
+        justify-content: space-between;
+    }
 }

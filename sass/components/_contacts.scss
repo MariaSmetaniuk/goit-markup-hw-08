@@ -1,21 +1,49 @@
 .contacts {
-    display: flex;
+    // @media screen and (max-width: 767px) {
+    //     display: none;
+    // }
+    @include mq (mobile-only) {
+        display: none;
+    }
 
     margin-left: auto;
-
-    align-items: center;
+    
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
+
+    // @media screen and (min-width: 1200px) {
+    //     display: flex;
+
+    //     font-size: 14px;
+    //     line-height: 1.14;
+    // } 
+    @include mq (desktop) {
+        display: flex;
+        
+        font-size: 14px;
+        line-height: 1.14;
+    }
 }
 .contacts__item {
-    margin-right: 50px;
-
+    // @media screen and (max-width: 1199px) {
+    //     margin-bottom: 10px;
+    // }
+    @include mq (notDesktop) {
+        margin-bottom: 10px;
+    }
+    // @media screen and (min-width: 1200px) {
+    //     margin-right: 50px;
+    // }
+    @include mq (desktop) {
+        margin-right: 50px;
+    }
     &:last-child {
         margin: 0;
     }
 }
+
 .contacts__link {
     display: flex;
     align-items: center;
@@ -28,7 +56,33 @@
         color: $accent-color;
     }
 }
+
 .contacts__icon {
-    margin-right: 10px;
+    margin-right: 8px;
     fill: currentColor;
+
+    // @media screen and (min-width: 1200px) {
+    //     margin-right: 10px;
+    // }
+    @include mq (desktop) {
+        margin-right: 10px;
+    }
+}
+.contacts__envelope {
+    width: 14px;
+    height: 10px;
+
+    @include mq (desktop) {
+        width: 16px;
+        height: 12px;
+    }
+}
+.contacts__smartphone {
+    width: 10px;
+    height: 14px;
+
+    @include mq (desktop) {
+        width: 10px;
+        height: 16px;
+    }
 }

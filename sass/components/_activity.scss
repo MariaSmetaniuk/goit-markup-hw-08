@@ -1,5 +1,9 @@
 .activity {
     padding-top: 0;
+
+    @include mq (notDesktop) {
+        display: none;
+    }
 }
 
 .activity__list {

@@ -1,8 +1,8 @@
 .logo {
     font-family: $secondary-font;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
 
     color: $accent-color;
@@ -10,16 +10,24 @@
     &--dark {
         color: $logo-dark-text;
     }
-    
     &--white {
         color: $primary-text-mode-dark;
     }
-}
 
+    @include mq (desktop) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
+}
 .header__logo {
-    margin-right: 94px;
+    @include mq (tablet) {
+        margin-right: 88px;
+    }
+    @include mq (desktop) {
+        margin-right: 94px;
+    }
 }
 .footer__logo {
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
 }

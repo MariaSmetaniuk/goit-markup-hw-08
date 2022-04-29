@@ -1,0 +1,48 @@
+.menu-button {
+    &.is-active {
+        position: fixed;
+        top: 10px;
+        right: 15px;
+    }
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+
+    background-color: transparent;
+    outline: transparent;
+    z-index: 20;
+
+    @include mq (tablet) {
+        display: none;
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+
+        &:hover,
+        &:focus {
+            fill: $accent-color;
+        }
+
+        &-open {
+            opacity: 1;
+        }
+        &-close {
+            opacity: 0;
+        }
+    }
+}
+
+.menu-button.is-active .menu-button__icon-open {
+    opacity: 0;
+}
+
+.menu-button.is-active .menu-button__icon-close {
+    opacity: 1;
+}
