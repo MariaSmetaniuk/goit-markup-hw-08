@@ -52,6 +52,10 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @include mq (mobile-only) {
+        text-align: center;
+    }
 }
 
 .features__description {
